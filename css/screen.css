@@ -1,0 +1,241 @@
+﻿body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #CCCCCC;
+}
+
+img 
+{
+    border: none;
+}
+
+div#page {
+	margin: 0px auto 0px auto;
+	width: 960px;
+	background-color: #FFFFFF;
+}
+
+div#header {
+	border-bottom: 1px #000000 solid;
+	text-align: left;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	padding: 10px;
+	position: relative;
+}
+
+    div#header h1, div#header h2 
+    {
+	    margin: 0px;
+	    padding: 0px;
+    }
+
+	div#header a {
+		text-decoration: none;
+		color: #000000;
+	}
+	
+		div#header a:hover {
+			border-bottom: 1px #000000 solid;
+		}
+		
+	div#header form#search {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	
+	    div#header form#search p 
+	    {
+	        margin: 0px;
+	    }
+	    
+	    div#header form#search input#keywords 
+	    {
+	        width: 27em;/*ensure 27 characters fit in the search box*/
+	    }
+	
+    div#sidebar h1,
+    div#sidebar h2,
+    div#content h1,
+    div#content h2 {
+	    margin: 10px 0px 0px 0px;
+	    padding: 0px;
+	    font-size: 2em;
+	    font-weight: normal;
+	    border-bottom: 1px #000000 dashed;
+    }
+
+	    div#content h2 a {
+		    text-decoration: none;
+		    color: #000000;
+	    }
+
+div#sidebar 
+{
+    float: left;
+	width: 200px;
+	margin: 0px 20px 0px 20px;
+	padding: 0px;
+}
+	
+div#sidebar ul {
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
+	div#sidebar ul li {
+		font-size: 1.2em;
+		list-style: none;
+	}
+	
+		div#sidebar ul li a {
+			text-decoration: none;
+			color: #000000;
+		}
+		
+		div#sidebar ul li:hover 
+		{
+		    text-decoration: underline;
+		}
+		
+    div#sidebar h2 
+    {
+        font-size: 1.8em;
+        border: none;
+    }
+    
+    div#sidebar p 
+    {
+        font-size: 1.2em;
+        margin: 0px 0px 10px 0px;
+    }
+
+div#content {
+	width: 700px;
+	margin: 0 20px 0 240px;
+	font-size: 1.4em;
+}
+
+	div#content p {
+		margin: 10px 25px 10px 0px;
+	}
+	
+div.info {
+	font-size: 0.8em;
+	text-align: right;
+	margin: 0px;
+}
+
+div#footer {
+	clear: both;
+	border-top: 1px #000000 solid;
+	text-align: center;
+	padding: 10px;
+}
+
+	div#footer ul {
+		margin: 0;
+		padding: 0;
+	}
+	
+		div#footer ul li {
+			list-style: none;
+			display: inline;
+			padding: 5px;
+		}
+
+small {
+	font-size: 10px;
+}
+
+blockquote p {
+	border-left: 5px #999999 solid;
+	padding: 0px 0px 0px 10px;
+}
+
+p.message {
+	border: 2px #9FCF9F solid;
+	background-color: #DFFFDF;
+	padding: 10px;
+}
+
+p.error {
+	border: 2px #DD0000 solid;
+	background-color: #FFE3E3;
+	padding: 10px;
+}
+
+div.pagination {
+	border: 1px #000000 solid;
+	padding: 10px;
+	height: 1.4em;
+	margin: 10px 0px 10px 0px;
+}
+
+	div.pagination span.older {
+		float: left;
+	}
+	
+	div.pagination span.newer {
+		float: right;
+	}
+	
+div.comment,
+div.comment-alt 
+{
+    padding: 5px;
+}
+
+div.comment-alt 
+{
+    background-color: #CCCCCC;
+}
+
+p#tagcloud 
+{
+    /**/
+}
+
+    p#tagcloud a 
+    {
+        text-decoration: none;
+        color: #000000;
+        
+    }
+    
+        p#tagcloud a:hover 
+        {
+            background-color: #CCCCCC;
+        }
+
+form input,
+form textarea 
+{
+    border: 1px #999999 solid;
+}
+
+    form input:focus 
+    {
+        border: 1px #CCCCCC solid;
+    }
+    
+div#error 
+{
+	font-size: 1.4em;
+	margin: 100px auto 0px auto;
+	border: 5px #999999 solid;
+	background-color: #FFFFFF;
+	padding: 20px;
+	width: 300px;
+}
+
+    div#error h1 
+    {
+        font-weight: normal;
+		font-size: 2em;
+		letter-spacing: 0.2em;
+		margin: 0px;
+		padding: 0px;
+    }

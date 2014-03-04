@@ -1,0 +1,6 @@
+# SlickCMS robots.txt
+# The asterisk (*) in the User-agent field is shorthand for "all robots"
+User-agent: *
+Disallow: /admin/
+Allow: /
+Sitemap: http://slickcms.slickhouse.com/sitemap.asp

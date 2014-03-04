@@ -1,0 +1,111 @@
+<script language="vbscript" runat="server">
+
+Sub Application_OnStart
+	Application("ActiveVisitors") = 0
+	Application("TotalVisitors") = 0
+
+	'live
+	Application("SiteURL") = "http://slickcms.slickhouse.com/" 'full URL to site
+	Application("ErrorLog") = "D:\Logs\ASP\slickcms_errors.log"	'path/name of error log file
+	Application("ConnectionString") = "Provider=SQLOLEDB;Data Source=127.0.0.1;Initial Catalog=slickcms;User Id=slickcms;Password=password-goes-here;"
+	Application("SiteName") = "SlickCMS"
+
+	'CMS
+	    'Application("Pagination") = 0
+	    'Application("Homepage") = 1
+	
+	'Blog with homepage - blog is located at "/page/1/"
+	    Application("Pagination") = 5
+	    Application("Homepage") = 1
+	
+	'Blog without homepage
+	    'Application("Pagination") = 5
+	    'Application("Homepage") = 0
+
+	Application("IIS_Version") = 7 'Version of IIS used: 6, 7/7.5
+
+	'general
+	Application("Debug") = 0 'debug mode 0/1
+	Application("AdminPagination") = 20 'number of results per page in the admin
+	Application("CDN") = "/" '"http://slickhouse.co.uk/slickcms/v2.5/" 'url to base of Content Delivery Network/static domain - set to "/" if none
+	Application("LockLimit") = 5 'number of failed logins prior to the account becoming locked
+	Application("SlickCMS_Version") = "2.5" 'SlickCMS version number
+	Application("ModerateComments") = 1 'force all comments to be moderated first
+	Application("FullPosts") = 1 'set to 0 to show summary and 1 for full post
+	Application("TitleTag") = "slickcms.slickhouse.com" 'trailing part of the <title> meta tag
+	Application("DescriptionTag") = "SlickCMS, an ASP/MSSQL CMS/Blog" 'default meta description
+	
+	'emails
+	Application("Mail_SMTP") = "mail.slickhouse.com" 'mailserver address (ip/domain)
+	Application("Mail_User") = "slickcms@slickhouse.com" 'mail account user
+	Application("Mail_Password") = "password-goes-here" 'mail account password
+	Application("Mail_Port") = 25 'port of mailserver
+	Application("Mail_Type") = "HTML" 'PLAIN/HTML
+	Application("Email") = "webmaster@slickhouse.com" 'admin email address
+	Application("Subject") = "Message from SlickCMS website" 'used on contact form
+    Application("ErrorsEmail") = "errors@slickhouse.com" 'email that the errors are sent from
+    Application("CommentEmails") = 1 'set to 1 to receive notification emails of new comments, 0 to not receive them
+
+    '3rd party integration
+	Application("AddThis") = 1 'use AddThis social bookmarking
+	Application("AddThis_Account") = "" 'account used for AddThis analytics
+	Application("AddThis_Version") = 20 'version number, e.g. 12/20
+	Application("GoogleAnalyticsID") = "UA-1234567-1"
+	Application("GoogleVerifyTag") = "google-verify-tag-goes-here"
+	
+	'site messages
+	Application("NoSearchResults") = "<p>No results were found.</p>"
+	Application("EmailBody") = "<p>The following message was sent from [name] ([from])</p><p>[message]</p>"
+	Application("UserRegisteredEmailBody") = "<p>New User registration on SlickCMS:<br />Name: [name]<br />Email: [email]</p>"
+	Application("NewCommentEmailBody") = "<p>A new comment on [post] ([url]) is waiting for your approval<br />Author: [name] ([ip])<br />Email: [email]<br />URL: [website]<br />Whois: http://ws.arin.net/cgi-bin/whois.pl?queryinput=[ip]<br />Comment: [comment]<br />Moderate it: http://slickcms/admin/comments.asp</p>"
+	Application("EmailSent") = "Your message was successfully sent. We'll be in contact soon."
+	Application("CaptchaFailed") = "Sorry, you entered the incorrect Captcha - please try again!"
+	
+	'admin messages
+	Application("LogOnSuccess") = "Hi <strong>[name]</strong>, you have successfully logged in!"
+	Application("LogOnFail") = "Sorry, your email address and/or password have not been recognised. Or your account is currently inactive."
+	Application("CheckLoginFailed") = "Please login to continue!"
+	Application("LoggedOut") = "You have successfully logged out!"
+	Application("AccountLocked") = "Your account has been locked!"
+	Application("ForgotPassword") = "Please enter your email address and a new password will be emailed to you shortly."
+	Application("CategorySaved") = "<p>Your category has been successfully saved!</p>"
+	Application("CategoryUpdated") = "<p>Your category has been successfully updated!</p>"
+	Application("CategoryDeleted") = "<p>Your category has been successfully deleted!</p>"
+	Application("TagSaved") = "<p>Your tag has been successfully saved!</p>"
+	Application("TagUpdated") = "<p>Your tag has been successfully updated!</p>"
+	Application("TagDeleted") = "<p>Your tag has been successfully deleted!</p>"
+	Application("LinkSaved") = "<p>Your link has been successfully saved!</p>"
+	Application("LinkUpdated") = "<p>Your link has been successfully updated!</p>"
+	Application("LinkDeleted") = "<p>Your link has been successfully deleted!</p>"
+	Application("PostSaved") = "<p>Your post has been successfully saved!</p>"
+	Application("PostUpdated") = "<p>Your post has been successfully updated!</p>"
+	Application("PostDeleted") = "<p>Your post has been successfully deleted!</p>"
+	Application("RelationshipSaved") = "<p>Your relationship has been successfully saved!</p>"
+	Application("RelationshipUpdated") = "<p>Your relationship has been successfully updated!</p>"
+	Application("RelationshipDeleted") = "<p>Your relationship has been successfully deleted!</p>"
+	Application("UserSaved") = "<p>The user has been successfully saved!</p>"
+	Application("UserUpdated") = "<p>The user has been successfully updated!</p>"
+	Application("UserDeleted") = "<p>The user has been successfully deleted!</p>"
+	Application("UserRegisterSuccess") = "You have successfully registered! An Admin will approve your account soon."
+	Application("UserPasswordResetEmail") = "Your new password is [password]"
+	Application("UserPasswordReset") = "Your password has successfully been reset. Please check your email!"
+	Application("UserPasswordResetError") = "Unfortunately your password has not been reset, please check the email address and try again!"
+	Application("CommentSaved") = "Your comment has been saved successfully - it will appear once moderated soon!"
+	Application("CommentDeleted") = "<p>The comment has been successfully deleted!</p>"
+	Application("CommentUpdated") = "<p>The comment has been successfully updated!</p>"
+End Sub
+
+Sub Session_OnStart
+	Application.Lock
+	Application("ActiveVisitors") = (Application("ActiveVisitors") + 1)
+	Application("TotalVisitors") = (Application("TotalVisitors") + 1)
+	Application.UnLock
+End Sub
+
+Sub Session_OnEnd
+	Application.Lock
+	Application("ActiveVisitors") = (Application("ActiveVisitors") - 1)
+	Application.UnLock
+End Sub
+
+</script>

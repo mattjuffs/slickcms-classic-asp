@@ -1,0 +1,99 @@
+﻿div#wmd-editor {
+	font-size: 10px;
+}
+
+div.wmd-panel {
+	width: 600px;
+}
+
+div#wmd-button-bar {
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+	border-bottom: 1px #000000 solid;
+}
+
+	div#wmd-button-bar > ul#wmd-button-row {
+		position: relative;
+		margin: 0px -2px 0px -2px;
+		padding: 0px;  
+		height: 20px;
+	}
+	
+		div#wmd-button-bar > ul#wmd-button-row > li.wmd-spacer {
+			width: 1px; 
+			height: 20px; 
+			margin: 0px 5px 0px 5px;
+			position: absolute;
+			background-color: #000000;
+			display: inline-block; 
+			list-style: none;
+		}
+		
+		div#wmd-button-bar > ul#wmd-button-row > li.wmd-button {
+			width: 20px; 
+			height: 20px; 
+			margin: 0px 2px 0px 2px;
+			position: absolute;
+			background-image: url('/wmd/wmd-buttons.png');
+			background-repeat: no-repeat;
+			background-position: 0px 0px;
+			display: inline-block; 
+			list-style: none;
+		}
+		
+		div#wmd-button-bar > ul#wmd-button-row > li.wmd-button > a {
+			width: 20px;
+			height: 20px;
+			margin: 0px 2px 0px 2px;
+			position: absolute;
+			display: inline-block;
+		}
+	
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-bold-button {left: 0px; background-position: 0px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-italic-button {left: 25px; background-position: -20px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-link-button {left: 50px; background-position: -40px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-quote-button {left: 75px; background-position: -60px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-code-button {left: 100px; background-position: -80px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-image-button {left: 125px; background-position: -100px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-olist-button {left: 150px; background-position: -120px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-ulist-button {left: 175px; background-position: -140px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-heading-button {left: 200px; background-position: -160px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-hr-button {left: 225px; background-position: -180px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-undo-button {left: 250px; background-position: -200px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-redo-button {left: 275px; background-position: -220px 0;}
+		div#wmd-button-bar > ul#wmd-button-row > li#wmd-help-button {right: 0px; background-position: -240px 0;}
+
+textarea#wmd-input { 
+	height: 200px;
+	width: 100%;
+	background-color: #E2E2E2;
+	border: 1px #000000 solid;
+}
+
+div#wmd-preview, div#wmd-output {
+	width: 600px;
+	height: 100px;
+	overflow: auto;
+}
+
+div.wmd-prompt-background {
+	background-color: #000000;
+}
+
+div.wmd-prompt-dialog {
+	border: 10px solid #999999;
+	background-color: #F5F5F5;
+}
+
+div.wmd-prompt-dialog > div {
+	font-size: 1.2em;
+}
+
+div.wmd-prompt-dialog > form > input[type="text"] {
+	border: 1px solid #999999;
+}
+
+div.wmd-prompt-dialog > form > input[type="button"]{
+	border: 1px solid #888888;
+	font-weight: bold;
+}

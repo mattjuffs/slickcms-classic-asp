@@ -1,0 +1,186 @@
+﻿body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #CCCCCC;
+}
+
+img 
+{
+    border: none;
+}
+
+div#page {
+	width: 960px;
+	margin: 0px auto 0px auto;
+	background-color: #FFFFFF;
+}
+
+div#header {
+	border-bottom: 1px #000000 solid;
+	padding: 10px;
+}
+
+    div#header ul {
+	    margin: 0;
+	    padding: 0;
+    }
+
+	    div#header ul li {
+		    font-size: 1.4em;
+		    list-style: none;
+		    display: inline;
+	    }
+    	
+		    div#header ul li a {
+			    text-decoration: none;
+			    color: #000000;
+		    }
+    		
+		    div#header ul li:hover {
+			    border-bottom: 1px #000000 solid;
+		    }
+
+div#content {
+	width: 940px;
+	margin: 20px;
+	font-size: 1.2em;
+}
+
+	div#content p {
+		margin: 10px 25px 10px 0px;
+	}
+
+div#footer {
+	clear: both;
+	border-top: 1px #000000 solid;
+	text-align: right;
+}
+
+p.message {
+	border: 2px #9FCF9F solid;
+	background-color: #DFFFDF;
+	padding: 10px;
+}
+
+p.error {
+	border: 2px #DD0000 solid;
+	background-color: #FFE3E3;
+	padding: 10px;
+}
+
+form#loginregister,
+form#uploadform {
+	font-size: 1.4em;
+	margin: 100px auto 0px auto;
+	border: 5px #999999 solid;
+	background-color: #FFFFFF;
+	padding: 20px;
+	width: 300px;
+}
+
+	form#loginregister h1,
+	form#uploadform h1 {
+		font-weight: normal;
+		font-size: 2em;
+		letter-spacing: 0.2em;
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	form#loginregister small a,
+	form#uploadform small a {
+		text-decoration: none;
+		color: #0000FF;
+	}
+	
+		form#loginregister small a:hover,
+		form#uploadform small a:hover {
+			border-bottom: 1px #0000FF solid;
+		}
+		
+tr.locked {
+	background-color: #FF0000;
+}
+
+table.records 
+{
+    width: 920px;
+}
+    
+    table.records tr.headings 
+    {
+        background-color: #0099FF;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    
+    table.records tr td 
+    {
+        border-bottom: 1px #000000 solid;
+    }
+
+div.pagination {
+    margin: 5px 0px 5px 0px;
+    padding: 0px;
+    font-size: 12px;
+}
+
+    div.pagination span 
+    {
+        margin: 1px 1px 6px 1px;
+        display: block;
+        float: left;
+    }
+
+        div.pagination span a 
+        {
+            display: block;
+            padding: 1px 3px 1px 3px;
+            border: 1px solid #CCCCCC;
+            text-decoration: none;
+        }
+
+            div.pagination span a:hover, div.pagination span a:active 
+            {
+                border: 1px solid #000000;
+                color: #000000;
+            }
+
+    div.pagination span.current 
+    {
+        margin: 1px 1px 1px 1px;
+    }
+    
+        div.pagination span.current a 
+        {
+            padding: 1px 3px 1px 3px;
+            border: 1px solid #000000;
+            font-weight: bold;
+            background-color: #999999;
+            color: #FFFFFF;
+        }
+
+    div.pagination span.disabled 
+    {
+        margin: 1px 1px 1px 1px;
+    }
+    
+        div.pagination span.disabled a 
+        {
+            padding: 1px 3px 1px 3px;
+            border: 1px solid #EEEEEE;
+            color: #DDDDDD;
+        }
+
+form input,
+form textarea 
+{
+    border: 1px #999999 solid;
+}
+
+    form input:focus 
+    {
+        border: 1px #000000 solid;
+        
+    }
