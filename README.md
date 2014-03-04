@@ -1,4 +1,4 @@
-slickcms-classic-asp
+SlickCMS Classic ASP
 ====================
 
 A Blog/CMS inspired by WordPress, built using VBScript in Classic ASP and SQL Server.
